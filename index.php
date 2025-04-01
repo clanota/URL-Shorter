@@ -115,4 +115,8 @@ foreach ($links as $link) {
     }
 }
 
+// 未找到匹配的短链接，跳转到首页
+header('Location: /');
+exit;
+
 ?>
