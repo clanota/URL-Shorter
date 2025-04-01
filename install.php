@@ -1,7 +1,32 @@
 <?php
 // 安装器 - 设置管理员密码
 if (file_exists('config.json')) {
-    die('配置文件已存在，如需重新安装请先删除config.json');
+    die('<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+        <meta name="renderer" content="webkit">
+        <link rel="stylesheet" href="https://npm.elemecdn.com/mdui@1.0.2/dist/css/mdui.min.css">
+        <title>Already installed</title>
+    </head>
+    <body>
+        <div class="mdui-container"><br>
+            <div class="mdui-card">
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">
+                        已经安装过了
+                    </div>
+                    <div class="mdui-card-primary-subtitle">
+                        如果需要再次安装就把config.json删了吧
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <script src="https://npm.elemecdn.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    </body>
+</html>');
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {
